@@ -1,0 +1,43 @@
+🕵️ Detection Logic
+
+📘 Description
+
+Detects potential privilege escalation by monitoring for creation of new user accounts and modifications to privileged groups such as Administrators.
+
+
+
+🔍 SPL (Splunk Search Processing Language)
+
+```spl
+index=win_logs sourcetype=WinEventLog:Security 
+(EventCode=4720 OR EventCode=4732 OR EventCode=4672)
+| eval AlertType=case(
+    EventCode=4720, "New User Account Created",
+    EventCode=4732, "User Added to Privileged Group",
+    EventCode=4672, "Special Privileges Assigned"
+)
+| table _time, AlertType, Account_Name, Target_Account_Name, Group_Name, host
+| sort -_time
+```
+
+
+
+🧠 Logic Explanation
+
+| Event ID | Meaning                                  | Why it's important                      |
+| -------- | ---------------------------------------- | --------------------------------------- |
+| 4720     | A user account was created               | Indicates initial step in escalation    |
+| 4732     | A user was added to a local group        | Confirms privilege elevation to a group |
+| 4672     | Special privileges assigned to new logon | Confirms login with elevated privileges |
+
+
+
+🔁 Alternative (Simplified SPL)
+
+```spl
+index=win_logs EventCode=4720 OR EventCode=4732 OR EventCode=4672
+```
+
+Use this for broader monitoring or dashboards.
+
+
