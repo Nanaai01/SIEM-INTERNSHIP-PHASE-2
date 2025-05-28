@@ -1,1 +1,15 @@
+LogName: Security
+EventCode: 4624
+Message: An account was successfully logged on.
+LogonType: 3 (Network)
+TargetUserName: Administrator
+SourceNetworkAddress: 192.168.189.20
+AuthenticationPackageName: NTLM
+
+LogName: System
+EventCode: 7045
+Message: A service was installed in the system.
+ServiceName: PSEXESVC
+ServiceFileName: C:\Windows\PSEXESVC.exe
+AccountName: Administrator
 
