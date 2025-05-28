@@ -1,1 +1,20 @@
+LogName: Security
+EventCode: 4720
+Message: A user account was created.
+SubjectUserName: ADMIN
+NewAccountName: backdoor
+NewAccountSid: S-1-5-21-1234-5678-7980-4657
+
+LogName: Security
+EventCode: 4732
+Message: A member was added to a security-enabled local group.
+SubjectUserName: ADMIN
+GroupName: Administrators
+MemberName: backdoor
+
+LogName: Security
+EventCode: 4672
+Message: Special privileges assigned to new logon.
+SubjectUserName: backdoor
+Privileges: SeDebugPrivilege, SeImpersonatePrivilege, SeTakeOwnershipPrivilege
 
