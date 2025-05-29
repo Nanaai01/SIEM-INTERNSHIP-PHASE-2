@@ -53,8 +53,6 @@ whoami /groups
 > Include screenshots of:
 
 * The alert in Splunk
-* Raw event logs (Event Viewer or Splunk)
-* `whoami` results before and after escalation
 
 
 
