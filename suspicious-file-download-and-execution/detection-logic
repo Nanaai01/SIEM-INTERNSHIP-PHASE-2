@@ -1,0 +1,3 @@
+index=* EventCode=4104
+| table _time, host, source, sourcetype, Message
+| sort -_time
