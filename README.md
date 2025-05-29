@@ -36,16 +36,15 @@ This repository documents key attack simulations and detection engineering activ
 
 ---
 
-3. 📥 Suspicious File Download & Execution
+3. 📥Suspicious File Download & Execution 
 
-- MITRE ATT&CK ID: [T1204.002 – User Execution: Malicious File](https://attack.mitre.org/techniques/T1204/002/)
-- Summary: Simulates downloading payloads using built-in tools like PowerShell or `certutil.exe`.
-- Detection Focus:
-  - Use of LOLBins to download or execute payloads
-  - File creation in suspicious paths (e.g., temp directories)
-  - Execution of unsigned or new binaries
+* MITRE ATT\&CK ID: [T1204.002 – User Execution: Malicious File](https://attack.mitre.org/techniques/T1204/002) 
+* Summary: Simulated the download of a malicious ZIP file using PowerShell’s `Invoke-WebRequest` from a Python-hosted HTTP server. The file was saved to `C:\Users\Public\`, mimicking typical adversary behavior. 
+* Detection Focus:
 
-
+  * PowerShell script block logging (Event ID 4104)
+  * Process creation with suspicious download commands (Event ID 4688 / Sysmon 1)
+  * Monitoring for file creation in public or temp directories
 
 ---
 
