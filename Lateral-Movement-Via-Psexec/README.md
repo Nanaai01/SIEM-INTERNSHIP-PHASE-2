@@ -1,4 +1,3 @@
-````markdown
 # 🔄 Lateral Movement via PsExec – Detection Use Case
 
 **MITRE ATT&CK Technique**: [T1021.002 – Remote Services: SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002/)
