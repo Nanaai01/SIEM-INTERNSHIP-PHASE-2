@@ -19,7 +19,7 @@ This repository documents key attack simulations and detection engineering activ
   - User added to privileged groups (Event ID `4732`)
   - Privileged logon detection (Event ID `4672`)
 
-🔗 [View Report](./use-cases/privilege-escalation.md)
+
 
 ---
 
@@ -32,7 +32,7 @@ This repository documents key attack simulations and detection engineering activ
   - Remote logon via network (Event ID `4624`)
   - Access to ADMIN$ shares (Event ID `5140`)
 
-🔗 [View Report](./use-cases/lateral-movement-report.md)
+
 
 ---
 
@@ -45,7 +45,7 @@ This repository documents key attack simulations and detection engineering activ
   - File creation in suspicious paths (e.g., temp directories)
   - Execution of unsigned or new binaries
 
-🔗 _Report coming soon_
+
 
 ---
 
@@ -58,7 +58,7 @@ This repository documents key attack simulations and detection engineering activ
   - Logon pattern anomalies
   - Group membership changes
 
-🔗 _Report coming soon_
+
 
 ---
 
@@ -71,7 +71,7 @@ This repository documents key attack simulations and detection engineering activ
   - Consistent timing intervals
   - Anomalous DNS or endpoint behavior
 
-🔗 _Report coming soon_
+
 
 ---
 
@@ -94,11 +94,6 @@ This repository documents key attack simulations and detection engineering activ
 > - `/ioc-samples/` – Sample logs and artifacts
 
 ---
-
-_This project demonstrates hands-on adversary emulation, log analysis, and detection engineering to build real-world blue team skills._
-
-
-
 
 
 🧪 Environment
