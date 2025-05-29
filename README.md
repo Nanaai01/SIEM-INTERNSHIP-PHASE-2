@@ -1,4 +1,3 @@
-```markdown
 ---
 🛡️ Phase 2 Internship – Security Detection Use Cases
 
