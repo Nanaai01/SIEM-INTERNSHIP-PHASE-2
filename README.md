@@ -1,4 +1,4 @@
-🛡️ Phase 2 Internship – Security Detection Use Cases
+# 🛡️ Phase 2 Internship – Security Detection Use Cases
 
 Welcome to my Phase 2 internship project, where I developed and tested multiple detection scenarios related to real-world adversarial techniques. These detections are mapped to the MITRE ATT&CK framework and validated using simulated attacker behaviors in a controlled lab environment.
 
