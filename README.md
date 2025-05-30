@@ -48,15 +48,20 @@ This repository documents key attack simulations and detection engineering activ
 
 ---
 
+Sure! Here’s the updated write-up including your simulation of User Account Control (UAC) activity:
+
+---
+
 4. 👤 Anomalous User Behavior
 
-- MITRE ATT&CK IDs: [T1087 – Account Discovery](https://attack.mitre.org/techniques/T1087/), [T1078 – Valid Accounts](https://attack.mitre.org/techniques/T1078/)
-- Summary: Detects unusual account behavior including after-hours logons, rapid permission changes, or login failures.
-- Detection Focus:
-  - UEBA-based analytics
-  - Logon pattern anomalies
-  - Group membership changes
+* MITRE ATT\&CK IDs: [T1087 – Account Discovery](https://attack.mitre.org/techniques/T1087/), [T1078 – Valid Accounts](https://attack.mitre.org/techniques/T1078/)
+* Summary: Carried out simulations of anomalous user behaviors including successful logins at odd hours, multiple failed login attempts, unusual Network Management Console (NMC) access, and User Account Control (UAC) elevation prompts. Developed detection rules to identify deviations from normal login and privilege escalation patterns.
+* Detection Focus:
 
+  * Simulated logins outside normal business hours to test detection of after-hours access.
+  * Generated failed login attempts to evaluate alerting on brute-force-like behavior.
+  * Monitored unusual NMC logins to detect potential privilege escalation or lateral movement.
+  * Simulated UAC elevation requests to detect unauthorized privilege escalations.
 
 
 ---
