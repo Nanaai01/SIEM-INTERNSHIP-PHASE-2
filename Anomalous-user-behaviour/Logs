@@ -1,1 +1,64 @@
+✅ 1. Successful User Login (EventCode 4624)
 
+```
+_time:         2025-05-30T06:22:35Z  
+EventCode:     4624  
+Account_Name:  Dummy  
+Logon_Type:    10 (RemoteInteractive)  
+Workstation_Name:  WIN-LAB01  
+Logon_ID:      0x4f2b1
+```
+
+---
+
+🌙 2. Odd Hours Login (EventCode 4624 at 03:22 AM)
+
+```
+_time:         2025-05-30T05:48:37Z  
+EventCode:     4624  
+Account_Name:  Dummy  
+Logon_Type:    2 (Interactive)  
+Workstation_Name:  WIN-LAB01  
+Logon_ID:      0x3e7
+```
+
+---
+
+3. Access to Administrative Tools (EventCode 4688)
+
+```
+_time:         2025-05-30T07:57:13Z  
+EventCode:     4688  
+Account_Name:  Dummy  
+New_Process_Name:  C:\Windows\System32\mmc.exe  
+CommandLine:   "mmc.exe compmgmt.msc"  
+Parent_Process_Name:  explorer.exe
+```
+
+---
+
+🔐 4. UAC Prompt / Privilege Escalation Attempt (EventCode 4688)
+
+```
+_time:         2025-05-30T03:26:12Z  
+EventCode:     4688  
+Account_Name:  Dummy  
+New_Process_Name:  C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe  
+CommandLine:   powershell.exe -WindowStyle hidden -EncodedCommand <Base64String>  
+Parent_Process_Name:  runas.exe
+```
+
+---
+
+🛂 5. Explicit Credential Logon (EventCode 4648)
+
+```
+_time:         2025-05-30T06:11:05Z  
+EventCode:     4648  
+Account_Name:  Dummy  
+Logon_ID:      0x4f2b2  
+Workstation_Name:  WIN-LAB01  
+Target_Username:  Administrator
+```
+
+---
